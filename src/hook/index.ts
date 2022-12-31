@@ -1,8 +1,9 @@
 import { ref, watch, onUnmounted, nextTick } from "vue";
 import type { Ref } from "vue";
+
 import { throttle } from "lodash";
 
-export type ResultType = {
+export type result = {
   isRoll: Ref<boolean>;
   isTarget: Ref<boolean>;
   backTopFun: () => void;
@@ -10,13 +11,13 @@ export type ResultType = {
 
 type WEle = Window | Document | HTMLElement;
 
-export type UseOnRollType = (hShow: number, target?: string) => ResultType;
+export type useOnRoll = (hShow: number, target?: string) => result;
 
 const cubic = (value: number) => Math.pow(value, 3);
 const easeInOutCubic = (value: number) =>
   value < 0.5 ? cubic(value * 2) / 2 : 1 - cubic((1 - value) * 2) / 2;
 
-export const useOnRoll: UseOnRollType = (hShow, target): ResultType => {
+export const useOnRoll: useOnRoll = (hShow, target): result => {
   let container: WEle;
   let element: any;
   let timer: any;
