@@ -1,15 +1,19 @@
+<script setup lang="ts">
+import TeleportElement from "@/components/Teleports.vue";
+</script>
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="element_layout">
+    <h1>This is an elemen page</h1>
+    <TeleportElement />
+    <div class="scoll_box"></div>
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  /* .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  } */
+<style scoped >
+.element_layout {
+}
+.scoll_box{
+  height: 100vh;
+  background-color: antiquewhite;
 }
 </style>
