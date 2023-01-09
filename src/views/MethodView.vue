@@ -1,16 +1,18 @@
+<script setup lang="ts">
+import TargetExposure from "@/components/TargetExposure.vue";
+</script>
 <template>
-    <div class="about">
-      <h1>This is an about page</h1>
-    </div>
-  </template>
-  
-  <style>
-  @media (min-width: 1024px) {
-    /* .about {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-    } */
-  }
-  </style>
-  
+  <div class="method_layout">
+    <h1>方法测试</h1>
+    <TargetExposure />
+  </div>
+</template>
+
+<style>
+.method_layout {
+}
+h1 {
+  width: 120px;
+  margin: 0 auto;
+}
+</style>

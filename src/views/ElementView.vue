@@ -3,17 +3,21 @@ import TeleportElement from "@/components/Teleports.vue";
 </script>
 <template>
   <div class="element_layout">
-    <h1>This is an elemen page</h1>
+    <h1>组件测试</h1>
     <TeleportElement />
     <div class="scoll_box"></div>
   </div>
 </template>
 
-<style scoped >
+<style scoped>
 .element_layout {
 }
-.scoll_box{
+.scoll_box {
   height: 100vh;
   background-color: antiquewhite;
+}
+h1 {
+  width: 120px;
+  margin: 0 auto;
 }
 </style>
