@@ -6,11 +6,12 @@ import {
 import Home from "@/views/Home/index.vue";
 import About from "@/views/About/index.vue";
 import AddPurchase from "@/views/AddPurchase/index.vue";
+import Algorithm from "@/views/Algorithm/index.vue";
 
 const routes = [
   {
     path: "/",
-    component: Home,
+    component: Algorithm,
   },
   {
     path: "/about",
@@ -22,6 +23,10 @@ const routes = [
     path: "/add-purchase",
     component: AddPurchase,
   },
+  // {
+  //   path: "/algorithm",
+  //   component: Algorithm,
+  // },
 ];
 
 const router = createRouter({
