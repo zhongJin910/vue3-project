@@ -1,13 +1,28 @@
 <template>
-  <div>
-    <div></div>
-  </div>
+  <div class="test" @click="testfn">test</div>
+  <div @click="() => scrollTo()">Top</div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref, inject } from "vue";
+import { useNoScroll } from "@/utils/hooks";
+
+useNoScroll();
+const is = ref(true);
+const testfn = () => {
+  is.value = !is.value;
+  const body = document.querySelector("body");
+  const disableIosCanPlay = (overflows) => {
+    body.style.overflow = overflows;
+  };
+  is.value ? disableIosCanPlay("hidden") : disableIosCanPlay("auto");
+};
+
+const scrollTo = inject("public_scrollTo");
+</script>
 
 <style scoped>
-div {
+.test {
   height: 200vh;
 }
 </style>

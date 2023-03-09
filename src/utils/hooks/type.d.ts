@@ -1,3 +1,3 @@
-export interface s {
+export interface types {
     name:any
 }
