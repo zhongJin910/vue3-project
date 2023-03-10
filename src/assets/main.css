@@ -1,20 +1,11 @@
 @import './base.css';
-
-* {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
+@import './common.scss';
 
 #app {
-  width: 100vw;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  /* min-height: 100vh; */
-  height: 100vh;
   font-weight: normal;
-  overflow-y: auto;
 }
 
 a,
@@ -34,5 +25,11 @@ a,
   body {
     display: flex;
     place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
   }
 }

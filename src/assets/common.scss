@@ -1,0 +1,45 @@
+/* 单行超出省略*/
+.single-line-ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* 两行超出省略*/
+.double-line-ellipsis {
+    white-space: normal;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+}
+
+/* 三行超出省略*/
+.three-line-ellipsis {
+    white-space: normal;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+}
+
+/* 四行超出省略*/
+.four-line-ellipsis {
+    white-space: normal;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    /* autoprefixer: ignore next */
+    -webkit-box-orient: vertical;
+}
